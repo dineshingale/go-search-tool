@@ -54,6 +54,11 @@ go build -o findit cmd/findit/main.go
 ./findit -path C:/Users/Downloads -name invoice
 ```
 
+## 💡 Technical Highlights
+- **High Performance**: Optimized for near-native speed using Go's efficient file handling.
+- **Robust Error Handling**: Gracefully manages permission interruptions and system errors to ensure uninterrupted scans.
+- **Maintainable Architecture**: Adheres to the **Standard Go Project Layout** (`cmd`, `internal`), ensuring scalability and clear separation of concerns.
+
 ## 🏗️ Architecture
 - **cmd/**: Application entry points.
   - `findit/`: CLI tool entry point.
