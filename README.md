@@ -1,31 +1,65 @@
-# 🔍 Fast-Search CLI (Go)
+# 🔍 Go Search Tool
 
-A high-performance command-line utility built in **Go** for lightning-fast file discovery across your system.
+A high-performance file search utility built in **Go**, featuring both a blazing fast CLI and a modern React Dashboard.
 
-## 🚀 Why this project?
-Standard file searches can be slow and resource-heavy. This utility uses Go's efficient file-walking capabilities to scan thousands of directories in milliseconds. It demonstrates a clean **Modular Architecture** by separating CLI logic from the core search engine.
+## 🚀 Features
+- **Ultra-fast Search**: Powered by Go's efficient file walking.
+- **Dual Interface**: Use the terminal or a beautiful Web UI.
+- **REST API**: Exposes search functionality via JSON API.
+- **Smart Filtering**: Filter by path, filename, and extension.
 
-## 🛠️ Installation
-1. Ensure you have **Go 1.21+** installed.
-2. Clone the repository and run:
-   ```bash
-   make build
-   ```
+## 🛠️ Installation & Setup
 
-## 📈 Usage
-Run the utility using flags to filter your search:
+### 1. Backend (Go)
+Ensure you have **Go 1.21+** installed.
 
-**Search for all PDF files in the current folder:**
 ```bash
+# Clone the repository
+git clone https://github.com/dineshingale/go-search-tool.git
+cd go-search-tool
+
+# Run the API Server
+go run cmd/server/main.go
+```
+The server will start on `http://localhost:8080`.
+
+### 2. Frontend (React + Vite)
+Ensure you have **Node.js** installed.
+
+```bash
+# Open a new terminal
+cd dashboard
+
+# Install dependencies
+npm install
+
+# Start the dashboard
+npm run dev
+```
+The UI will be available at `http://localhost:5173`.
+
+## 📈 CLI Usage
+If you prefer the command line, you can build the CLI tool:
+
+```bash
+go build -o findit cmd/findit/main.go
+```
+
+**Examples:**
+```bash
+# Search for PDFs
 ./findit -ext .pdf
+
+# Search in a specific path
+./findit -path C:/Users/Downloads -name invoice
 ```
 
-**Search for a specific file name in a different directory:**
-```bash
-./findit -path /Users/Downloads -name "invoice"
-```
+## 🤝 Contributing
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-**Search for a specific file type with a partial name:**
-```bash
-./findit -name "budget" -ext .xlsx
-```
+---
+**License**: MIT
