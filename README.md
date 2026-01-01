@@ -11,3 +11,21 @@ Standard file searches can be slow and resource-heavy. This utility uses Go's ef
    ```bash
    make build
    ```
+
+## 📈 Usage
+Run the utility using flags to filter your search:
+
+**Search for all PDF files in the current folder:**
+```bash
+./findit -ext .pdf
+```
+
+**Search for a specific file name in a different directory:**
+```bash
+./findit -path /Users/Downloads -name "invoice"
+```
+
+**Search for a specific file type with a partial name:**
+```bash
+./findit -name "budget" -ext .xlsx
+```
