@@ -54,6 +54,14 @@ go build -o findit cmd/findit/main.go
 ./findit -path C:/Users/Downloads -name invoice
 ```
 
+## 🏗️ Architecture
+- **cmd/**: Application entry points.
+  - `findit/`: CLI tool entry point.
+  - `server/`: REST API server entry point.
+- **internal/engine/**: Core search logic. Uses `filepath.Walk` for efficient recursion.
+- **dashboard/**: React + Vite frontend application.
+- **Makefile**: Automates the build and run process.
+
 ## 🤝 Contributing
 1. Fork the repo
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
