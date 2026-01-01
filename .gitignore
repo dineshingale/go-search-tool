@@ -1,0 +1,10 @@
+
+# Binaries
+/bin
+/dist
+
+# Go workspaces
+go.work
+
+# Dependency directories (if using vendor, though typically checked in)
+/vendor/
