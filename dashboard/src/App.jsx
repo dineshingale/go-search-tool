@@ -4,7 +4,7 @@ function App() {
   const [path, setPath] = useState('')
   const [name, setName] = useState('')
   const [ext, setExt] = useState('')
-  const [results, setResults] = useState < string[] > ([])
+  const [results, setResults] = useState([])
   const [loading, setLoading] = useState(false)
   const [count, setCount] = useState(0)
 
